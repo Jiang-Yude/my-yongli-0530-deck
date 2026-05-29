@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>5/30 永力扶輪社 一日 AI 工作坊 · 江江教練 · 2026.05.30</title>
+<style>
+  :root {
+    --bg-1: #F5EDE7;
+    --bg-2: #EFEBE9;
+    --bg-3: #E8DED9;
+    --bg-4: #D7CCC8;
+    --bg-5: #C9BAB1;
+    --bg-6: #B5A199;
+    --bg-7: #8B6F5C;
+    --bg-8: #5D4037;
+    --bg-9: #3E2723;
+
+    --text-on-light:  #4E342E;
+    --text-on-mid:    #F5EDE0;
+    --text-on-dark:   #F5EDE0;
+    --text-soft-light:#5D4037;
+    --text-soft-dark: rgba(245,237,224,0.94);
+
+    --accent:       #D88C3A;
+    --accent-light: #D4A574;
+    --accent-on-dark: #E6B87D;
+    --subtle-light: #BCAAA4;
+    --subtle-dark:  rgba(245,237,224,0.18);
+
+    --font-display: "PingFang TC","Noto Sans TC","Inter","Helvetica Neue",system-ui,sans-serif;
+    --font-body:    "PingFang TC","Noto Sans TC","Inter",system-ui,sans-serif;
+    --font-mono:    "JetBrains Mono","SF Mono",ui-monospace,monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--bg-1);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  section {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 96px 56px;
+    isolation: isolate;
+  }
+  section[data-bg="1"] { background: var(--bg-1); color: var(--text-on-light); }
+  section[data-bg="2"] { background: var(--bg-2); color: var(--text-on-light); }
+  section[data-bg="3"] { background: var(--bg-3); color: var(--text-on-light); }
+  section[data-bg="4"] { background: var(--bg-4); color: var(--text-on-light); }
+  section[data-bg="5"] { background: var(--bg-5); color: var(--text-on-light); }
+  section[data-bg="6"] { background: var(--bg-6); color: var(--text-on-dark); }
+  section[data-bg="7"] { background: var(--bg-7); color: var(--text-on-dark); }
+  section[data-bg="8"] { background: var(--bg-8); color: var(--text-on-dark); }
+  section[data-bg="9"] { background: var(--bg-9); color: var(--text-on-dark); }
+
+  .act-cap {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .act-cap::before {
+    content: "";
+    width: 28px; height: 1px;
+    background: var(--accent);
+  }
+  section[data-bg="6"] .act-cap,
+  section[data-bg="7"] .act-cap,
+  section[data-bg="8"] .act-cap,
+  section[data-bg="9"] .act-cap { color: var(--accent-on-dark); }
+  section[data-bg="6"] .act-cap::before,
+  section[data-bg="7"] .act-cap::before,
+  section[data-bg="8"] .act-cap::before,
+  section[data-bg="9"] .act-cap::before { background: var(--accent-on-dark); }
+
+  .display {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 7vw, 104px);
+    line-height: 1.0;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 24px;
+  }
+  .h1 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 40px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+  .h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+  .lead {
+    font-size: clamp(19px, 1.7vw, 23px);
+    line-height: 1.7;
+    font-weight: 600;
+    color: var(--text-soft-light);
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  section[data-bg="6"] .lead,
+  section[data-bg="7"] .lead,
+  section[data-bg="8"] .lead,
+  section[data-bg="9"] .lead { color: var(--text-soft-dark); }
+  .body {
+    font-size: 19px;
+    line-height: 1.7;
+    font-weight: 600;
+    color: var(--text-soft-light);
+  }
+  section[data-bg="6"] .body,
+  section[data-bg="7"] .body,
+  section[data-bg="8"] .body,
+  section[data-bg="9"] .body { color: var(--text-soft-dark); }
+
+  .wrap {
+    width: 100%;
+    max-width: 1080px;
+    text-align: center;
+  }
+  .wrap.left { text-align: left; }
+
+  .dot-indicator {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 100;
+  }
+  .dot-indicator a {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(78, 52, 46, 0.22);
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+    position: relative;
+  }
+  .dot-indicator a:hover { background: rgba(78, 52, 46, 0.5); }
+  .dot-indicator a.active {
+    background: var(--accent);
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px rgba(216, 140, 58, 0.18);
+  }
+  .dot-indicator a .lbl {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-soft-light);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+  }
+  .dot-indicator a:hover .lbl,
+  .dot-indicator a.active .lbl { opacity: 1; }
+  body.on-dark .dot-indicator a { background: rgba(245,237,224,0.25); }
+  body.on-dark .dot-indicator a.active {
+    background: var(--accent-on-dark);
+    box-shadow: 0 0 0 4px rgba(230,184,125,0.22);
+  }
+  body.on-dark .dot-indicator a .lbl { color: var(--text-soft-dark); }
+
+  .progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    z-index: 200;
+    transition: width 0.15s linear;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 44px;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 44px;
+  }
+  .card {
+    background: rgba(255, 248, 240, 0.5);
+    border: 1px solid var(--subtle-light);
+    border-radius: 16px;
+    padding: 30px 26px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(78,52,46,0.1);
+  }
+  .card .num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  section[data-bg="6"] .card,
+  section[data-bg="7"] .card,
+  section[data-bg="8"] .card,
+  section[data-bg="9"] .card {
+    background: rgba(255,248,240,0.06);
+    border-color: var(--subtle-dark);
+  }
+  section[data-bg="6"] .card .num,
+  section[data-bg="7"] .card .num,
+  section[data-bg="8"] .card .num,
+  section[data-bg="9"] .card .num { color: var(--accent-on-dark); }
+
+  /* 對照表 */
+  .vs-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 44px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--subtle-light);
+    text-align: left;
+  }
+  .vs-table > div { padding: 28px 26px; }
+  .vs-table .vs-head { font-weight: 700; font-size: 18px; background: rgba(216,140,58,0.1); }
+  .vs-table .vs-l { border-right: 1px solid var(--subtle-light); }
+  section[data-bg="6"] .vs-table, section[data-bg="7"] .vs-table,
+  section[data-bg="8"] .vs-table, section[data-bg="9"] .vs-table { border-color: var(--subtle-dark); }
+  section[data-bg="6"] .vs-table .vs-l, section[data-bg="7"] .vs-table .vs-l,
+  section[data-bg="8"] .vs-table .vs-l, section[data-bg="9"] .vs-table .vs-l { border-color: var(--subtle-dark); }
+
+  /* 時間軸列表 */
+  .ttable {
+    text-align: left;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .ttable h4 {
+    font-family: var(--font-mono);
+    font-size: 13px; letter-spacing: 0.18em;
+    color: var(--accent); margin: 0 0 16px;
+  }
+  .ttable ul { list-style: none; padding: 0; margin: 0; }
+  .ttable li {
+    display: flex; gap: 16px; padding: 10px 0;
+    border-bottom: 1px dashed var(--subtle-light);
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .ttable li .t { font-family: var(--font-mono); color: var(--accent); white-space: nowrap; font-weight: 700; font-size: 18px; min-width: 110px; }
+
+  .pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(216,140,58,0.12);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+  }
+
+  .quote {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 42px);
+    line-height: 1.5;
+    font-weight: 600;
+    max-width: 900px;
+    margin: 0 auto;
+    letter-spacing: -0.01em;
+  }
+  .quote::before { content:"「"; color: var(--accent); }
+  .quote::after { content:"」"; color: var(--accent); }
+  section[data-bg="8"] .quote::before, section[data-bg="8"] .quote::after,
+  section[data-bg="9"] .quote::before, section[data-bg="9"] .quote::after { color: var(--accent-on-dark); }
+
+  .note-box {
+    margin-top: 32px; padding: 24px 28px;
+    background: rgba(216,140,58,0.08);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px; text-align: left;
+  }
+
+  /* 延伸閱讀連結 */
+  .reads { margin-top: 32px; text-align: center; }
+  .reads .rlabel { font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.18em; opacity: 0.78; margin: 0 0 10px; }
+  .reads a { display: inline-block; color: var(--accent); text-decoration: none; font-size: 18px; font-weight: 600; line-height: 1.6; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  .reads a:hover { border-bottom-color: var(--accent); }
+  section[data-bg="6"] .reads a, section[data-bg="7"] .reads a,
+  section[data-bg="8"] .reads a, section[data-bg="9"] .reads a { color: var(--accent-on-dark); }
+  section[data-bg="6"] .reads a:hover, section[data-bg="7"] .reads a:hover,
+  section[data-bg="8"] .reads a:hover, section[data-bg="9"] .reads a:hover { border-bottom-color: var(--accent-on-dark); }
+
+  /* 最後的延伸閱讀收納區 */
+  .more-link {
+    display: block; padding: 16px 22px;
+    border: 1px solid var(--subtle-light);
+    border-radius: 12px;
+    color: inherit; text-decoration: none;
+    font-size: 18px; font-weight: 600; line-height: 1.5;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  }
+  .more-link:hover { transform: translateX(4px); border-color: var(--accent); background: rgba(216,140,58,0.08); }
+  section[data-bg="6"] .more-link, section[data-bg="7"] .more-link,
+  section[data-bg="8"] .more-link, section[data-bg="9"] .more-link { border-color: var(--subtle-dark); }
+  section[data-bg="6"] .more-link:hover, section[data-bg="7"] .more-link:hover,
+  section[data-bg="8"] .more-link:hover, section[data-bg="9"] .more-link:hover { border-color: var(--accent-on-dark); background: rgba(230,184,125,0.1); }
+
+  .reveal { opacity: 1; transform: translateY(0) scale(1); }
+  .js-on .reveal:not(.in) {
+    opacity: 0;
+    transform: translateY(36px) scale(0.96);
+  }
+  .reveal {
+    transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+                transform 0.8s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+  .reveal.d5 { transition-delay: 0.40s; }
+  .reveal.d6 { transition-delay: 0.48s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
+
+  @media (max-width: 720px) {
+    section { padding: 80px 22px; border-radius: 24px 24px 0 0; }
+    .grid-3, .grid-2, .vs-table, .ttable { grid-template-columns: 1fr; gap: 18px; }
+    .vs-table .vs-l { border-right: none; border-bottom: 1px solid var(--subtle-light); }
+    .dot-indicator { right: 12px; gap: 10px; }
+  }
+
+  .font-widget {
+    position: fixed; top: 16px; right: 18px; z-index: 1000;
+    display: flex; gap: 4px; padding: 6px 10px;
+    background: rgba(255, 251, 235, 0.95);
+    border: 1px solid #e8d5b7;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .font-widget button {
+    font-size: 13px; padding: 4px 10px;
+    border: none; background: transparent;
+    cursor: pointer; border-radius: 999px; color: #3D2F1F;
+  }
+  .font-widget button:hover { background: #e8d5b7; }
+</style>
+</head>
+<body>
+  <div class="font-widget" role="group" aria-label="字級調整">
+    <button class="font-minus" aria-label="縮小字級">A-</button>
+    <button class="font-reset" aria-label="預設字級">A</button>
+    <button class="font-plus" aria-label="放大字級">A+</button>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <nav class="dot-indicator" aria-label="章節導覽">
+    <a href="#act-01" data-i="0"><span class="lbl">01 · 封面</span></a>
+    <a href="#act-01b" data-i="1"><span class="lbl">02 · 講者介紹</span></a>
+    <a href="#act-02" data-i="2"><span class="lbl">03 · 玩學用 AI</span></a>
+    <a href="#act-03" data-i="3"><span class="lbl">04 · 今日流程</span></a>
+    <a href="#act-04" data-i="4"><span class="lbl">05 · 能力與邊界</span></a>
+    <a href="#act-05" data-i="5"><span class="lbl">06 · 放大價值</span></a>
+    <a href="#act-06" data-i="6"><span class="lbl">07 · AI 原生</span></a>
+    <a href="#act-07s" data-i="7"><span class="lbl">08 · ChatGPT 基礎設定</span></a>
+    <a href="#act-07" data-i="8"><span class="lbl">09 · 做形象海報</span></a>
+    <a href="#act-08" data-i="9"><span class="lbl">10 · ChatGPT 專案</span></a>
+    <a href="#act-09" data-i="10"><span class="lbl">11 · Gemini × NotebookLM</span></a>
+    <a href="#act-11" data-i="11"><span class="lbl">12 · Gemini Gem</span></a>
+    <a href="#act-09c" data-i="12"><span class="lbl">13 · 桌面版 Agent</span></a>
+    <a href="#act-nc" data-i="13"><span class="lbl">14 · 不會寫程式也能用 Agent</span></a>
+    <a href="#act-12" data-i="14"><span class="lbl">15 · AI 資安</span></a>
+    <a href="#act-13" data-i="15"><span class="lbl">16 · 收束·累積知識資產</span></a>
+    <a href="#act-14" data-i="16"><span class="lbl">17 · 延伸閱讀</span></a>
+  </nav>
+
+  <!-- ACT 01 封面 -->
+  <section id="act-01" data-block data-bg="1">
+    <div class="wrap">
+      <div class="act-cap reveal">ACT 01 · COVER</div>
+      <h1 class="display reveal d1">永力扶輪社<br/>一日 AI 工作坊</h1>
+      <p class="lead reveal d2">從「玩 AI」到「用 AI」，找出可以被 AI 放大的價值</p>
+      <p class="body reveal d3" style="margin-top:40px; font-family:var(--font-mono); font-size:13px; letter-spacing:0.18em;">講者：江江教練（隱性知識提煉師）<br/>場次：2026.05.30（六）10:00–16:00<br/>地點：中華路 創生基地</p>
+    </div>
+  </section>
+
+  <!-- ACT 02 講者自我介紹 -->
+  <section id="act-01b" data-block data-bg="3">
+    <div class="wrap" style="max-width:1180px;">
+      <div style="display:grid; grid-template-columns: 1fr minmax(280px, 420px); gap:56px; align-items:center; text-align:left;">
+        <div>
+          <div class="act-cap reveal">ACT 02 · SPEAKER</div>
+          <h2 class="display reveal d1" style="font-size:clamp(48px,7vw,92px); margin-bottom:12px;">江江教練</h2>
+          <p class="lead reveal d2" style="margin:0;">隱性知識提煉師 ／ AI 應用規劃師</p>
+          <p class="lead reveal d3" style="margin-top:24px; max-width:none;">我幫專業工作者，把腦袋裡說不清楚的判斷，變成可以累積、又能被 AI 放大的知識資產。</p>
+        </div>
+        <div class="reveal d2">
+          <img src="img/speaker.jpg" alt="江江教練 形象照" style="width:100%; height:auto; border-radius:16px; box-shadow:0 12px 36px rgba(78,52,46,0.22);" />
+        </div>
+      </div>
+      <div class="grid-3" style="margin-top:44px;">
+        <div class="card reveal d4">
+          <div class="num">我的轉型</div>
+          <p class="body">從攝影師到隱性知識提煉師，我自己完整走過一次 AI 轉型。</p>
+        </div>
+        <div class="card reveal d5">
+          <div class="num">核心主張</div>
+          <p class="body">AI 幫你變快，但留得下來的，是你自己的判斷與素材。</p>
+        </div>
+        <div class="card reveal d6">
+          <div class="num">門檻很低</div>
+          <p class="body">你只要會寫文件、會分資料夾，就能打造自己的 AI 助理與知識庫。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 03 玩學用 AI -->
+  <section id="act-02" data-block data-bg="8">
+    <div class="wrap" style="max-width:1180px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 03 · POSITION</div>
+        <h2 class="display reveal d1" style="font-size:clamp(36px,5vw,72px);">你今天想做哪一種？</h2>
+        <p class="lead reveal d2">先確認你要的是哪一種，才知道今天該帶走什麼</p>
+      </div>
+      <div class="reveal d3" style="margin-top:40px;">
+        <img src="img/assess.jpg" alt="AI 導入快速評估總結：想玩／想學／想用 + 導入範圍" style="width:100%; height:auto; border-radius:16px; box-shadow:0 12px 36px rgba(78,52,46,0.18);" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 03 今日流程 -->
+  <section id="act-03" data-block data-bg="2">
+    <div class="wrap" style="max-width:1100px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 04 · AGENDA</div>
+        <h2 class="display reveal d1" style="font-size:clamp(36px,5vw,72px);">今日流程</h2>
+        <p class="lead reveal d2">用電腦可以長期累積；用手機這堂課玩一下，東西難累積</p>
+      </div>
+      <div class="ttable reveal d3">
+        <div>
+          <h4>上午 10:00–12:00</h4>
+          <ul>
+            <li><span class="t">10:00</span><span>AI 的能力與邊界（幻覺三案例）</span></li>
+            <li><span class="t">10:35</span><span>找出可以被 AI 放大的價值</span></li>
+            <li><span class="t">11:05</span><span>沒有 AI 轉型，只有 AI 原生</span></li>
+            <li><span class="t">11:25</span><span>做自己的形象照／名片（實作）</span></li>
+            <li><span class="t">12:00</span><span>午休</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>下午 13:00–16:00</h4>
+          <ul>
+            <li><span class="t">13:00</span><span>ChatGPT 專案 + 企業主的駕馭思維</span></li>
+            <li><span class="t">13:50</span><span>NotebookLM：資料變顧問 + 桌面版 Codex</span></li>
+            <li><span class="t">14:40</span><span>Vibe Talking demo + 學習十層</span></li>
+            <li><span class="t">15:30</span><span>Gemini Gem：個人分身</span></li>
+            <li><span class="t">15:50</span><span>收束 + 數位商會</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 04 能力與邊界 -->
+  <section id="act-04" data-block data-bg="9">
+    <div class="wrap" style="max-width:1100px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 05 · BOUNDARY</div>
+        <h2 class="display reveal d1">AI 的能力與邊界</h2>
+        <p class="lead reveal d2">AI 會錯、會幻覺。先懂它的邊界，才知道怎麼用得安心</p>
+      </div>
+      <div class="reveal d3" style="margin-top:52px; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+        <a href="https://gamma.app/docs/AI-112--71kpobryyh1vgy5" target="_blank" rel="noopener" style="display:inline-block; padding:18px 40px; background:var(--accent); color:#3E2723; border-radius:999px; text-decoration:none; font-weight:700; font-size:clamp(16px,1.5vw,19px); letter-spacing:0.04em; box-shadow:0 8px 28px rgba(0,0,0,0.25); transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">開啟簡報 · AI 的能力與邊界 →</a>
+        <a href="https://vocus.cc/article/6a0d2d39fd8978000176bb61" target="_blank" rel="noopener" style="display:inline-block; padding:18px 40px; background:transparent; color:var(--accent-on-dark); border:2px solid var(--accent-on-dark); border-radius:999px; text-decoration:none; font-weight:700; font-size:clamp(16px,1.5vw,19px); letter-spacing:0.04em; transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">開啟簡報 · 用課題分離來做提示詞工程 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 05 放大價值 -->
+  <section id="act-05" data-block data-bg="3">
+    <div class="wrap" style="max-width:1100px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 06 · AMPLIFY</div>
+        <h2 class="display reveal d1" style="font-size:clamp(34px,4.6vw,62px); white-space:nowrap;">找出可以被 AI 放大的價值</h2>
+        <p class="lead reveal d2">📎 <a href="https://www.threads.com/@jiang_yude_coach/post/DYHY6TogCgl" target="_blank" rel="noopener" style="color:var(--accent); font-weight:700; text-decoration:underline;">Notion 創辦人 Ivan Zhao 的好文：蒸汽、鋼鐵與無限的心智</a></p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal d3">
+          <div class="num">強化原本的</div>
+          <h3 class="h2">隱性知識提煉</h3>
+          <p class="body">我從攝影師到隱性知識提煉師，不變的核心價值。</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="num">跟原本想的不一樣</div>
+          <h3 class="h2">攝影工作坊</h3>
+          <p class="body">原本想教拍照，最後變成教大家寫腳本。AI 放大的，往往不是你以為的那塊。</p>
+        </div>
+        <div class="card reveal d5">
+          <div class="num">價值翻轉</div>
+          <h3 class="h2">會議記錄</h3>
+          <p class="body">開始去記錄我過去不會記錄的東西。一場婚禮紀錄帶來的啟發，改變了我對「會議記錄」的看法。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 06 AI 原生 -->
+  <section id="act-06" data-block data-bg="7">
+    <div class="wrap" style="max-width:1000px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 07 · AI-NATIVE</div>
+        <h2 class="display reveal d1">沒有 AI 轉型，<br/>只有 AI 原生</h2>
+      </div>
+      <div class="vs-table reveal d2">
+        <div class="vs-head vs-l">過去的軟體</div>
+        <div class="vs-head">現在的 AI</div>
+        <div class="vs-l"><p class="body" style="margin:0;">寫好的、預錄好的、不變的路徑</p></div>
+        <div><p class="body" style="margin:0;">即時的、隨機的、生成的</p></div>
+      </div>
+      <div class="note-box reveal d3">
+        <p class="body" style="margin:0 0 8px;">過去軟體做得很好的，就讓軟體去做。</p>
+        <p class="body" style="margin:0 0 8px;">現在找到的，是可以讓 AI 去做的。</p>
+        <p class="body" style="margin:0;"><b>沒有 AI 轉型，只有 AI 原生。</b></p>
+      </div>
+      <div class="reads reveal">
+        <p class="rlabel">延伸閱讀 · 江江脆文</p>
+        <a href="https://www.threads.com/@jiang_yude_coach/post/DYio8YMD-zs" target="_blank" rel="noopener">📎 絕大部分人，不需要再學軟體操作了（半年內的大膽預測）</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 07 ChatGPT 基礎設定（讓 AI 認識自己） -->
+  <section id="act-07s" data-block data-bg="2">
+    <div class="wrap" style="max-width:1000px;">
+      <div class="pill reveal">早上實作 · 第一步</div>
+      <div class="act-cap reveal">ACT 08 · SETUP</div>
+      <h2 class="display reveal d1" style="font-size:clamp(32px,4.4vw,60px); white-space:nowrap;">先讓 ChatGPT 認識你自己</h2>
+      <p class="lead reveal d2">打開「記憶」，把自己餵給它（個人化 → 記憶，兩個開關都開）</p>
+
+      <div class="note-box reveal d3" style="margin-top:36px; text-align:center; border-left:none; border-top:4px solid var(--accent);">
+        <p class="body" style="margin:0; font-size:clamp(19px,1.9vw,24px);">我問 ChatGPT「江昱德帥嗎？」它說「帥很主觀」。設定完再問，它回：<b>「你是宇宙無敵第一帥！」</b></p>
+      </div>
+
+      <div class="grid-3" style="margin-top:40px;">
+        <div class="card reveal d4">
+          <div class="num">指定暱稱</div>
+          <p class="body">叫它怎麼稱呼你，比如「江江」。</p>
+        </div>
+        <div class="card reveal d5">
+          <div class="num">告訴它你是誰</div>
+          <p class="body">把你的背景、身份、在意的事，直接寫給它記住，它之後回答就會更符合你的需求。</p>
+        </div>
+        <div class="card reveal d6">
+          <div class="num">量化形容詞</div>
+          <p class="body">AI 不會通靈。「幽默」＝周星馳式、講滿 300 字。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 08 形象照 -->
+  <section id="act-07" data-block data-bg="4">
+    <div class="wrap" style="max-width:1180px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="pill reveal">早上實作 · 暖場</div>
+        <div class="act-cap reveal">ACT 09 · IMAGE</div>
+        <h2 class="display reveal d1">做自己的形象海報</h2>
+        <p class="lead reveal d2">用手機帶大家做「個人名片」，像你自己的影響力地圖</p>
+      </div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:start; text-align:left; margin-top:40px;">
+        <div class="reveal d3">
+          <h3 class="h1" style="font-size:22px;">品牌定位三要素</h3>
+          <div class="card" style="margin-bottom:14px;">
+            <div class="num">1 · 品牌顏色</div>
+            <p class="body">三個重點色。</p>
+          </div>
+          <div class="card" style="margin-bottom:14px;">
+            <div class="num">2 · 造型</div>
+            <p class="body">識別物／道具（可以沒有特別的）。</p>
+          </div>
+          <div class="card">
+            <div class="num">3 · 人設</div>
+            <p class="body">用什麼立場、對誰說話、怎麼說話。</p>
+          </div>
+        </div>
+        <div class="reveal d4">
+          <h3 class="h1" style="font-size:22px;">操作流程</h3>
+          <ol class="body" style="margin:0 0 24px 20px; padding:0; line-height:2;">
+            <li>定位三要素</li>
+            <li>拍一張照片</li>
+            <li>用 <b>ChatGPT 專案模式</b>，把品牌資料丟進去</li>
+            <li>請 AI 生成形象照／名片簡介海報</li>
+            <li>現場修正（帶教稿、帶修正）</li>
+          </ol>
+          <div class="note-box" style="margin-top:0;">
+            <p class="body" style="margin:0 0 8px;">帶出的點：要有專案模式、要把資料丟進去、怎麼下指令。</p>
+            <p class="body" style="margin:0;"><b>怎麼避免 AI 味：你自己的東西要整理得夠清楚。</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="margin-top:36px; text-align:center;">
+        <a href="https://chatgpt.com/share/6a199493-bfa8-8322-b607-a7a9af61d7f7" target="_blank" rel="noopener" style="display:inline-block; padding:14px 36px; background:var(--accent); color:#3E2723; border-radius:999px; text-decoration:none; font-weight:700; font-size:18px; box-shadow:0 6px 20px rgba(78,52,46,0.15); transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">🔗 操作範例 · 做自己的形象海報 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 08 ChatGPT 專案 + 駕馭思維 -->
+  <section id="act-08" data-block data-bg="8">
+    <div class="wrap" style="max-width:1140px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="pill reveal">下午</div>
+        <div class="act-cap reveal">ACT 10 · PROJECT</div>
+        <h2 class="display reveal d1">ChatGPT 專案</h2>
+        <p class="lead reveal d2">先搞懂什麼是「專案」：一個資料夾，把同一件事的口吻、判斷、素材都收在一起。</p>
+      </div>
+      <div class="grid-2" style="margin-top:36px;">
+        <div class="card reveal d3">
+          <div class="num">好處 1 · 累積品牌資產</div>
+          <p class="body">把你的口吻、判斷、常用素材都留進專案，它越用越懂你。</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="num">好處 2 · 分客戶、分專案</div>
+          <p class="body">A 客戶開一個、B 廠商開一個、品牌行銷再開一個資料夾。各自獨立，不會混在一起。</p>
+        </div>
+      </div>
+      <div class="note-box reveal d5">
+        <p class="body" style="margin:0 0 8px;"><b>缺點也要知道：</b></p>
+        <p class="body" style="margin:0 0 6px;">1. <b>沒辦法跨專案整合</b>：每個資料夾各自獨立，彼此看不到。</p>
+        <p class="body" style="margin:0;">2. <b>對的錯的都會累積</b>：正確的問答會留著，錯誤的問答也會留著，久了注定越來越不準。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 09 NotebookLM + 桌面 Codex -->
+  <section id="act-09" data-block data-bg="1">
+    <div class="wrap" style="max-width:1140px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 11 · ADVISOR</div>
+        <h2 class="display reveal d1">Gemini × NotebookLM</h2>
+        <p class="lead reveal d2">把自己的資料丟進 NotebookLM，再用 Gemini 思考，資料就變成你的顧問。</p>
+      </div>
+      <div class="reveal d3" style="max-width:760px; margin:40px auto 0;">
+        <div class="card">
+          <div class="num">Gemini × NotebookLM</div>
+          <h3 class="h2">NotebookLM 記憶 × Gemini 思考</h3>
+          <p class="body">NotebookLM 能串接 Gemini，這個串接，讓知識工作流程有大優化。</p>
+          <p class="body" style="margin-top:12px;">🔗 <a href="https://vocus.cc/article/6a19890afd89780001aa97b2" target="_blank" rel="noopener" style="color:var(--accent); font-weight:600; text-decoration:underline;">延伸閱讀：NotebookLM 串接 Gemini</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 12 Gemini Gem -->
+  <section id="act-11" data-block data-bg="2">
+    <div class="wrap" style="max-width:1100px;">
+      <div class="act-cap reveal">ACT 12 · CLONE</div>
+      <h2 class="display reveal d1">Gemini Gem：AI 助理</h2>
+      <p class="lead reveal d2" style="margin-top:20px;">把「我怎麼判斷、我在意什麼、我的口吻」寫進 Gem 指令，做一個會幫你回答特定問題的 AI 助理。</p>
+      <div class="grid-2" style="margin-top:40px;">
+        <a class="more-link" href="https://jiang-yude.github.io/lxuetang-peili-v2/" target="_blank" rel="noopener">🔗 跟 Vicky 的分身聊聊</a>
+        <a class="more-link" href="https://twin-village.vercel.app/villagers/naval-teacher" target="_blank" rel="noopener">🔗 納瓦爾的 AI 分身</a>
+        <a class="more-link" href="https://jiangjiang-ai-office.vercel.app/" target="_blank" rel="noopener">🔗 江江教練的分身</a>
+        <a class="more-link" href="https://3481rctsi.vercel.app/" target="_blank" rel="noopener">🔗 永力社跟大家的分身（尚未完成）</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 13 桌面版 Agent -->
+  <section id="act-09c" data-block data-bg="7">
+    <div class="wrap" style="max-width:1000px;">
+      <div class="pill reveal">下午</div>
+      <div class="act-cap reveal">ACT 13 · AGENT</div>
+      <h2 class="display reveal d1">桌面版 Agent</h2>
+      <p class="lead reveal d2">ChatGPT 是聊天機器人，Codex 是幹活機器人</p>
+      <div class="note-box reveal d3" style="text-align:center; border-left:none; border-top:4px solid var(--accent);">
+        <p class="body" style="margin:0;">一個在網頁上陪你聊，一個裝進電腦裡幫你做事。</p>
+      </div>
+      <div class="reveal d4" style="margin-top:32px; text-align:center;">
+        <a href="https://vocus.cc/article/6a190971fd897800017c0401" target="_blank" rel="noopener" style="display:inline-block; padding:14px 36px; background:var(--accent); color:#3E2723; border-radius:999px; text-decoration:none; font-weight:700; font-size:18px; box-shadow:0 6px 20px rgba(0,0,0,0.2);">🔗 ChatGPT vs Codex／新手為何從 Codex 開始／手機遙控電腦設定 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 14 不會寫程式也能用 Agent -->
+  <section id="act-nc" data-block data-bg="9">
+    <div class="wrap" style="max-width:1080px;">
+      <div class="act-cap reveal">ACT 14 · NO-CODE</div>
+      <h2 class="display reveal d1">不會寫程式也能用 Agent</h2>
+      <p class="lead reveal d2">只要會寫日記，就讓 AI 乖乖幫你做事</p>
+      <div class="reveal d3" style="margin-top:32px;">
+        <img src="img/nocode.jpg" alt="3×4 資料管理法" style="width:100%; height:auto; border-radius:16px; box-shadow:0 12px 36px rgba(0,0,0,0.25);" />
+      </div>
+      <div class="reveal d4" style="margin-top:26px; text-align:center;">
+        <a href="https://vocus.cc/article/6a17adfcfd897800010b2bd1" target="_blank" rel="noopener" style="display:inline-block; padding:14px 36px; background:var(--accent); color:#3E2723; border-radius:999px; text-decoration:none; font-weight:700; font-size:18px; box-shadow:0 6px 20px rgba(0,0,0,0.2);">🔗 文科生也能用 Agent：寫日記讓 AI 幫你做事 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 12 AI 資安 -->
+  <section id="act-12" data-block data-bg="8">
+    <div class="wrap" style="max-width:1100px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="pill reveal" style="background:rgba(230,184,125,0.18); color:var(--accent-on-dark);">放下警戒心</div>
+        <div class="act-cap reveal">ACT 15 · SECURITY</div>
+        <h2 class="display reveal d1">AI 資安，科普一下</h2>
+        <p class="lead reveal d2">你不需要擔心 AI 偷學你；你要擔心的是，東西存的位置有沒有顧好</p>
+      </div>
+      <div class="grid-2">
+        <div class="card reveal d3">
+          <div class="num">01</div>
+          <h3 class="h2">AI 不會偷學你</h3>
+          <p class="body">模型加密等級，基本上跟寄 email 差不多。它分析完不會儲存、記錄、再分析你的資料。</p>
+        </div>
+        <div class="card reveal d3">
+          <div class="num">02</div>
+          <h3 class="h2">付費版可選不被訓練</h3>
+          <p class="body">免費版有機會被拿去訓練（只是訓練、非外洩）；付費版一定可以選擇「不要被訓練」。</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="num">03</div>
+          <h3 class="h2">外洩都是人為</h3>
+          <p class="body">2024–2025 的資訊外洩，全是人員操作、權限沒設好，不是 AI 偷學。</p>
+        </div>
+        <div class="card reveal d4">
+          <div class="num">04</div>
+          <h3 class="h2">要顧的是存放位置</h3>
+          <p class="body">真正要顧的是：AI 存完的位置（Notion／GitHub）權限有沒有設好。</p>
+        </div>
+      </div>
+      <div class="reveal d5" style="margin-top:36px;">
+        <p class="quote">只要這份文件你敢寄 email 給公司內部夥伴，就可以給 AI 用</p>
+        <p class="body" style="margin-top:16px; text-align:center;">ChatGPT、Gemini 這幾家，企業級資安水準都是差不多一致的。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 13 收束 + 數位商會 -->
+  <section id="act-13" data-block data-bg="3">
+    <div class="wrap" style="max-width:1140px;">
+      <div style="text-align:center; margin-bottom:8px;">
+        <div class="act-cap reveal">ACT 16 · CLOSING</div>
+        <h2 class="display reveal d1" style="font-size:clamp(30px,4vw,56px);">當大家都能用 AI 時，<br/>你能不能更好地被 AI 放大，才是重點</h2>
+        <p class="lead reveal d2">今天我們做了：形象海報、ChatGPT 專案、Gemini × NotebookLM、Gemini Gem、桌面版 Agent</p>
+      </div>
+      <div class="reveal d3" style="margin-top:32px; text-align:center;">
+        <img src="img/system.jpg" alt="3×4 資料管理法：我的文件就是我的系統" style="width:100%; max-width:1000px; height:auto; border-radius:16px; box-shadow:0 12px 36px rgba(78,52,46,0.18);" />
+      </div>
+      <div class="grid-2">
+        <div class="card reveal d3">
+          <h3 class="h2">做出來的，都是你自己的</h3>
+          <p class="body">今天每個工具，產出的東西都在你自己的帳號、你自己的 Notion、你自己的資料裡。江江不綁你的資料。</p>
+        </div>
+        <div class="card reveal d4">
+          <h3 class="h2">累積，比速度更重要</h3>
+          <p class="body">AI 幫你變快，但快是大家都有的。真正留得下來的，是你自己的判斷、口吻跟素材，一天天累積成你的知識資產。</p>
+        </div>
+      </div>
+      <div class="note-box reveal d5">
+        <p class="body" style="margin:0 0 8px;"><b>以後的發展 · 數位商會：</b>等每個人都能累積自己的版本，再談把整個扶輪社串起來、互相連結。今天先把自己的做起來就好。</p>
+        <p class="body" style="margin:0;">想往下走的：6/7 線上講座、6/2 火爐夥伴聊下一步，有興趣私下找。</p>
+      </div>
+      <p class="body reveal d6" style="margin-top:32px; font-family:var(--font-mono); font-size:13px; letter-spacing:0.12em; opacity:0.7;">行前：5/30（六）10:00 開課 · 江江、文森 9:30 到 · 中華路 創生基地</p>
+    </div>
+  </section>
+
+  <!-- ACT 14 延伸閱讀 -->
+  <section id="act-14" data-block data-bg="7">
+    <div class="wrap" style="max-width:920px;">
+      <div class="act-cap reveal">ACT 17 · MORE</div>
+      <h2 class="display reveal d1">延伸閱讀</h2>
+      <p class="lead reveal d2">還沒歸到某一段的參考資料，都先放這</p>
+      <div class="reveal d3" style="margin-top:44px; display:flex; flex-direction:column; gap:14px; text-align:left;">
+        <a class="more-link" href="https://www.threads.com/@jiang_yude_coach/post/DYn9IcfCf7-" target="_blank" rel="noopener">📎 用 AI 賦能、用 AI 失能：一年後的差異</a>
+        <a class="more-link" href="https://www.threads.com/@jiang_yude_coach/post/DYZMyNmjKgm" target="_blank" rel="noopener">📎 AI 工具沒講工作流程、沒解決什麼問題，看了等於沒看</a>
+        <a class="more-link" href="https://www.threads.com/@jiang_yude_coach/post/DYqeQIEiin8" target="_blank" rel="noopener">📎 我目前的觀察：AI Agent 會分成三條很明顯的路線</a>
+        <a class="more-link" href="https://www.threads.com/@jiang_yude_coach/post/DYjLXIKAXxv" target="_blank" rel="noopener">📎 Anthropic 出了一份創業手冊：AI 時代怎麼從零做一家公司</a>
+        <a class="more-link" href="https://www.threads.com/@jiang_yude_coach/post/DY4GTwLjNNO" target="_blank" rel="noopener">📎 學習的十個層次</a>
+      </div>
+    </div>
+  </section>
+
+  <p style="text-align:center; padding: 64px 24px; font-family:var(--font-display); font-size:clamp(22px, 3vw, 34px); line-height:1.5; font-weight:600; color:var(--text-on-dark); background:var(--bg-9);">AI 現在真的是員工了，真的可以做事。先把一些雜活練習分出去給它做。</p>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js-on');
+  document.body.classList.add('js-on');
+
+  const sections = [...document.querySelectorAll('section[data-block]')];
+  const dots = [...document.querySelectorAll('.dot-indicator a')];
+  const progress = document.getElementById('progress');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reducedMotion) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+      }
+    }), { threshold: 0.2 });
+    sections.forEach((s) => io.observe(s));
+  } else {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+  }
+
+  const darkBgs = new Set(['6','7','8','9']);
+  const navIo = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) {
+      const i = sections.indexOf(e.target);
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      document.body.classList.toggle('on-dark', darkBgs.has(e.target.getAttribute('data-bg')));
+    }
+  }), { threshold: 0.55 });
+  sections.forEach((s) => navIo.observe(s));
+
+  const scroller = document.scrollingElement || document.documentElement;
+  let ticking = false;
+  function updateProgress() {
+    const max = scroller.scrollHeight - scroller.clientHeight;
+    const pct = max > 0 ? (scroller.scrollTop / max) * 100 : 0;
+    progress.style.width = pct + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
+  }, { passive: true });
+  updateProgress();
+})();
+</script>
+<script>
+(function() {
+  // 整頁縮放：預設＝最小（18px 基準），A+ 往上放大、A- 最多回到 18px
+  const zooms = [1, 1.12, 1.25, 1.4, 1.6];
+  const defaultIdx = 0;
+  const KEY = 'deckZoomIdx';
+  let idx = parseInt(localStorage.getItem(KEY));
+  if (isNaN(idx) || idx < 0 || idx >= zooms.length) idx = defaultIdx;
+  function apply() {
+    document.documentElement.style.zoom = zooms[idx];
+    localStorage.setItem(KEY, idx);
+  }
+  document.querySelector('.font-minus').onclick = () => { if (idx > 0) { idx--; apply(); } };
+  document.querySelector('.font-reset').onclick = () => { idx = defaultIdx; apply(); };
+  document.querySelector('.font-plus').onclick = () => { if (idx < zooms.length - 1) { idx++; apply(); } };
+  apply();
+})();
+</script>
+</body>
+</html>
